@@ -1,0 +1,23 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if data|length > 10 %}
+      <h1>{{data|upper}} is morethan 10 characters</h1>
+    {% else %}
+      <h1>data is lessthan 10 characters</h1>
+    {% endif %}
+    <h2>{{data|length|add:"10"}}</h2>
+    <h2>{{data|upper|lower}}</h2>
+    <h2>{{data|title}}</h2>
+    <h4>{{a|add:b}}</h4>
+    <h2>{{data|is_lower}}</h2>
+    <h2>{{data|upper|isupper}}</h2>
+    <h3>{{num|plural:"mangoe"}}</h3>
+</body>
+</html>
